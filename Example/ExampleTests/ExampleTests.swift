@@ -18,6 +18,12 @@ class ExampleTests: XCTestCase {
         viewController = (storyBoard.instantiateInitialViewController() as! ViewController)
     }
 
+    func testViewControllerNoSessionManager() {
+        ObjectRegistry.unregister(SessionManager.self)
+        
+        XCTAssertFalse(viewController.isLoggedIn)
+    }
+    
     func testViewControllerNoAccess() {
         ObjectRegistry.register(SessionManager(firstName: "foo",
                                                lastName: "bar",
