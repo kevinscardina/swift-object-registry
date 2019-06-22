@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D1D60B622BDBB4100EA73FD /* SingletonRegistry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1D60AC22BDBB4100EA73FD /* SingletonRegistry.framework */; };
-		3D1D60BB22BDBB4100EA73FD /* SingletonRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D60BA22BDBB4100EA73FD /* SingletonRegistryTests.swift */; };
-		3D1D60BD22BDBB4100EA73FD /* SingletonRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D1D60AF22BDBB4100EA73FD /* SingletonRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D1D60C722BDBB7100EA73FD /* SingletonRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D60C622BDBB7100EA73FD /* SingletonRegistry.swift */; };
+		3D1D60B622BDBB4100EA73FD /* ObjectRegistry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1D60AC22BDBB4100EA73FD /* ObjectRegistry.framework */; };
+		3D1D60BB22BDBB4100EA73FD /* ObjectRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D60BA22BDBB4100EA73FD /* ObjectRegistryTests.swift */; };
+		3D1D60BD22BDBB4100EA73FD /* ObjectRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D1D60AF22BDBB4100EA73FD /* ObjectRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D1D60C722BDBB7100EA73FD /* ObjectRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D60C622BDBB7100EA73FD /* ObjectRegistry.swift */; };
 		3D1D60C922BDD11900EA73FD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3D1D60C822BDD11900EA73FD /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -25,13 +25,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D1D60AC22BDBB4100EA73FD /* SingletonRegistry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SingletonRegistry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D1D60AF22BDBB4100EA73FD /* SingletonRegistry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonRegistry.h; sourceTree = "<group>"; };
+		3D1D60AC22BDBB4100EA73FD /* ObjectRegistry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectRegistry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1D60AF22BDBB4100EA73FD /* ObjectRegistry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectRegistry.h; sourceTree = "<group>"; };
 		3D1D60B022BDBB4100EA73FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D1D60B522BDBB4100EA73FD /* SingletonRegistryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingletonRegistryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D1D60BA22BDBB4100EA73FD /* SingletonRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonRegistryTests.swift; sourceTree = "<group>"; };
+		3D1D60B522BDBB4100EA73FD /* ObjectRegistryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectRegistryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1D60BA22BDBB4100EA73FD /* ObjectRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRegistryTests.swift; sourceTree = "<group>"; };
 		3D1D60BC22BDBB4100EA73FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D1D60C622BDBB7100EA73FD /* SingletonRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonRegistry.swift; sourceTree = "<group>"; };
+		3D1D60C622BDBB7100EA73FD /* ObjectRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRegistry.swift; sourceTree = "<group>"; };
 		3D1D60C822BDD11900EA73FD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D1D60B622BDBB4100EA73FD /* SingletonRegistry.framework in Frameworks */,
+				3D1D60B622BDBB4100EA73FD /* ObjectRegistry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				3D1D60C822BDD11900EA73FD /* README.md */,
-				3D1D60AE22BDBB4100EA73FD /* SingletonRegistry */,
-				3D1D60B922BDBB4100EA73FD /* SingletonRegistryTests */,
+				3D1D60AE22BDBB4100EA73FD /* ObjectRegistry */,
+				3D1D60B922BDBB4100EA73FD /* ObjectRegistryTests */,
 				3D1D60AD22BDBB4100EA73FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,29 +67,29 @@
 		3D1D60AD22BDBB4100EA73FD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3D1D60AC22BDBB4100EA73FD /* SingletonRegistry.framework */,
-				3D1D60B522BDBB4100EA73FD /* SingletonRegistryTests.xctest */,
+				3D1D60AC22BDBB4100EA73FD /* ObjectRegistry.framework */,
+				3D1D60B522BDBB4100EA73FD /* ObjectRegistryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3D1D60AE22BDBB4100EA73FD /* SingletonRegistry */ = {
+		3D1D60AE22BDBB4100EA73FD /* ObjectRegistry */ = {
 			isa = PBXGroup;
 			children = (
-				3D1D60AF22BDBB4100EA73FD /* SingletonRegistry.h */,
+				3D1D60AF22BDBB4100EA73FD /* ObjectRegistry.h */,
 				3D1D60B022BDBB4100EA73FD /* Info.plist */,
-				3D1D60C622BDBB7100EA73FD /* SingletonRegistry.swift */,
+				3D1D60C622BDBB7100EA73FD /* ObjectRegistry.swift */,
 			);
-			path = SingletonRegistry;
+			path = ObjectRegistry;
 			sourceTree = "<group>";
 		};
-		3D1D60B922BDBB4100EA73FD /* SingletonRegistryTests */ = {
+		3D1D60B922BDBB4100EA73FD /* ObjectRegistryTests */ = {
 			isa = PBXGroup;
 			children = (
-				3D1D60BA22BDBB4100EA73FD /* SingletonRegistryTests.swift */,
+				3D1D60BA22BDBB4100EA73FD /* ObjectRegistryTests.swift */,
 				3D1D60BC22BDBB4100EA73FD /* Info.plist */,
 			);
-			path = SingletonRegistryTests;
+			path = ObjectRegistryTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,16 +99,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D1D60BD22BDBB4100EA73FD /* SingletonRegistry.h in Headers */,
+				3D1D60BD22BDBB4100EA73FD /* ObjectRegistry.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3D1D60AB22BDBB4100EA73FD /* SingletonRegistry */ = {
+		3D1D60AB22BDBB4100EA73FD /* ObjectRegistry */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D1D60C022BDBB4100EA73FD /* Build configuration list for PBXNativeTarget "SingletonRegistry" */;
+			buildConfigurationList = 3D1D60C022BDBB4100EA73FD /* Build configuration list for PBXNativeTarget "ObjectRegistry" */;
 			buildPhases = (
 				3D1D60A722BDBB4100EA73FD /* Headers */,
 				3D1D60A822BDBB4100EA73FD /* Sources */,
@@ -119,14 +119,14 @@
 			);
 			dependencies = (
 			);
-			name = SingletonRegistry;
+			name = ObjectRegistry;
 			productName = SingletonManager;
-			productReference = 3D1D60AC22BDBB4100EA73FD /* SingletonRegistry.framework */;
+			productReference = 3D1D60AC22BDBB4100EA73FD /* ObjectRegistry.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3D1D60B422BDBB4100EA73FD /* SingletonRegistryTests */ = {
+		3D1D60B422BDBB4100EA73FD /* ObjectRegistryTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D1D60C322BDBB4100EA73FD /* Build configuration list for PBXNativeTarget "SingletonRegistryTests" */;
+			buildConfigurationList = 3D1D60C322BDBB4100EA73FD /* Build configuration list for PBXNativeTarget "ObjectRegistryTests" */;
 			buildPhases = (
 				3D1D60B122BDBB4100EA73FD /* Sources */,
 				3D1D60B222BDBB4100EA73FD /* Frameworks */,
@@ -137,9 +137,9 @@
 			dependencies = (
 				3D1D60B822BDBB4100EA73FD /* PBXTargetDependency */,
 			);
-			name = SingletonRegistryTests;
+			name = ObjectRegistryTests;
 			productName = SingletonManagerTests;
-			productReference = 3D1D60B522BDBB4100EA73FD /* SingletonRegistryTests.xctest */;
+			productReference = 3D1D60B522BDBB4100EA73FD /* ObjectRegistryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -161,7 +161,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3D1D60A622BDBB4100EA73FD /* Build configuration list for PBXProject "SingletonRegistry" */;
+			buildConfigurationList = 3D1D60A622BDBB4100EA73FD /* Build configuration list for PBXProject "ObjectRegistry" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -173,8 +173,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3D1D60AB22BDBB4100EA73FD /* SingletonRegistry */,
-				3D1D60B422BDBB4100EA73FD /* SingletonRegistryTests */,
+				3D1D60AB22BDBB4100EA73FD /* ObjectRegistry */,
+				3D1D60B422BDBB4100EA73FD /* ObjectRegistryTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,7 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D1D60C722BDBB7100EA73FD /* SingletonRegistry.swift in Sources */,
+				3D1D60C722BDBB7100EA73FD /* ObjectRegistry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D1D60BB22BDBB4100EA73FD /* SingletonRegistryTests.swift in Sources */,
+				3D1D60BB22BDBB4100EA73FD /* ObjectRegistryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +219,7 @@
 /* Begin PBXTargetDependency section */
 		3D1D60B822BDBB4100EA73FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3D1D60AB22BDBB4100EA73FD /* SingletonRegistry */;
+			target = 3D1D60AB22BDBB4100EA73FD /* ObjectRegistry */;
 			targetProxy = 3D1D60B722BDBB4100EA73FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -360,7 +360,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SingletonRegistry/Info.plist;
+				INFOPLIST_FILE = ObjectRegistry/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,7 +387,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SingletonRegistry/Info.plist;
+				INFOPLIST_FILE = ObjectRegistry/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -408,7 +408,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C3Z7CN96JC;
-				INFOPLIST_FILE = SingletonRegistryTests/Info.plist;
+				INFOPLIST_FILE = ObjectRegistryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -427,7 +427,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C3Z7CN96JC;
-				INFOPLIST_FILE = SingletonRegistryTests/Info.plist;
+				INFOPLIST_FILE = ObjectRegistryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,7 +443,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3D1D60A622BDBB4100EA73FD /* Build configuration list for PBXProject "SingletonRegistry" */ = {
+		3D1D60A622BDBB4100EA73FD /* Build configuration list for PBXProject "ObjectRegistry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D1D60BE22BDBB4100EA73FD /* Debug */,
@@ -452,7 +452,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D1D60C022BDBB4100EA73FD /* Build configuration list for PBXNativeTarget "SingletonRegistry" */ = {
+		3D1D60C022BDBB4100EA73FD /* Build configuration list for PBXNativeTarget "ObjectRegistry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D1D60C122BDBB4100EA73FD /* Debug */,
@@ -461,7 +461,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D1D60C322BDBB4100EA73FD /* Build configuration list for PBXNativeTarget "SingletonRegistryTests" */ = {
+		3D1D60C322BDBB4100EA73FD /* Build configuration list for PBXNativeTarget "ObjectRegistryTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D1D60C422BDBB4100EA73FD /* Debug */,

@@ -3,18 +3,18 @@
 
 import Foundation
 
-/// SingletonRegistry is a class used to store singleton instances within a project.
+/// ObjectRegistry is a class used to store singleton instances within a project.
 /// It can be used for "Invertion of Control" allowing the singletons to all be stored in
-/// the SingletonRegistry singleton and then retreived anywhere in the scope of the project by
+/// the ObjectRegistry singleton and then retreived anywhere in the scope of the project by
 /// getting the singleton from the manager.  A singleton object can be registered in the
-/// SingletonRegistry based on the object type, and an optional name.
-public class SingletonRegistry {
+/// ObjectRegistry based on the object type, and an optional name.
+public class ObjectRegistry {
     // MARK: - private
     private init() {}
     private var registry = [(String?, AnyObject)]()
 }
 
-extension SingletonRegistry {
+extension ObjectRegistry {
     // MARK: - internal properties
     /// Count is the number of objects registered with the registry
     var count: Int { return registry.count }
@@ -54,15 +54,15 @@ extension SingletonRegistry {
     }
 }
 
-public extension SingletonRegistry {
+public extension ObjectRegistry {
     // MARK: - internal static properties
     /// singleton instance of the registry used by the static functions
-    static let shared = SingletonRegistry()
+    static let shared = ObjectRegistry()
     
     // MARK: - public static properties
     /// Count is the number of objects registered with the registry
     public static var count: Int {
-        return SingletonRegistry.shared.count
+        return ObjectRegistry.shared.count
     }
     
     // MARK: - public static functions
@@ -71,7 +71,7 @@ public extension SingletonRegistry {
     ///     - object: the object one would like to register
     ///     - named: an optional value to register with the object for Multiton option
     public static func register<T: AnyObject>(_ object: T, named: String? = nil) {
-        SingletonRegistry.shared.register(object, named: named)
+        ObjectRegistry.shared.register(object, named: named)
     }
     
     /// Unregisters with the registry based on type
@@ -79,7 +79,7 @@ public extension SingletonRegistry {
     ///     - ofType: type the object one would like to unregister
     ///     - named: an optional value to unregister a named object
     public static func unregister<T: AnyObject>(_ ofType: T.Type, named: String? = nil) {
-        SingletonRegistry.shared.unregister(ofType, named: named)
+        ObjectRegistry.shared.unregister(ofType, named: named)
     }
     
     /// Unregisters with the registry
@@ -87,6 +87,6 @@ public extension SingletonRegistry {
     ///     - ofType: type the object one would like to get the single instance of
     ///     - named: what the object to get is named if object was registred with a name
     public static func get<T: AnyObject>(_ ofType: T.Type, named: String? = nil) -> T? {
-        return SingletonRegistry.shared.get(ofType, named: named)
+        return ObjectRegistry.shared.get(ofType, named: named)
     }
 }

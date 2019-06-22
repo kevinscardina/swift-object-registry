@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3D1D60AB22BDBB4100EA73FD"
-               BuildableName = "SingletonRegistry.framework"
-               BlueprintName = "SingletonRegistry"
-               ReferencedContainer = "container:SingletonRegistry.xcodeproj">
+               BuildableName = "ObjectRegistry.framework"
+               BlueprintName = "ObjectRegistry"
+               ReferencedContainer = "container:ObjectRegistry.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D1D60AB22BDBB4100EA73FD"
-            BuildableName = "SingletonRegistry.framework"
-            BlueprintName = "SingletonRegistry"
-            ReferencedContainer = "container:SingletonRegistry.xcodeproj">
+            BuildableName = "ObjectRegistry.framework"
+            BlueprintName = "ObjectRegistry"
+            ReferencedContainer = "container:ObjectRegistry.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -44,9 +44,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3D1D60B422BDBB4100EA73FD"
-               BuildableName = "SingletonRegistryTests.xctest"
-               BlueprintName = "SingletonRegistryTests"
-               ReferencedContainer = "container:SingletonRegistry.xcodeproj">
+               BuildableName = "ObjectRegistryTests.xctest"
+               BlueprintName = "ObjectRegistryTests"
+               ReferencedContainer = "container:ObjectRegistry.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -54,9 +54,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D1D60AB22BDBB4100EA73FD"
-            BuildableName = "SingletonRegistry.framework"
-            BlueprintName = "SingletonRegistry"
-            ReferencedContainer = "container:SingletonRegistry.xcodeproj">
+            BuildableName = "ObjectRegistry.framework"
+            BlueprintName = "ObjectRegistry"
+            ReferencedContainer = "container:ObjectRegistry.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D1D60AB22BDBB4100EA73FD"
-            BuildableName = "SingletonRegistry.framework"
-            BlueprintName = "SingletonRegistry"
-            ReferencedContainer = "container:SingletonRegistry.xcodeproj">
+            BuildableName = "ObjectRegistry.framework"
+            BlueprintName = "ObjectRegistry"
+            ReferencedContainer = "container:ObjectRegistry.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D1D60AB22BDBB4100EA73FD"
-            BuildableName = "SingletonRegistry.framework"
-            BlueprintName = "SingletonRegistry"
-            ReferencedContainer = "container:SingletonRegistry.xcodeproj">
+            BuildableName = "ObjectRegistry.framework"
+            BlueprintName = "ObjectRegistry"
+            ReferencedContainer = "container:ObjectRegistry.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
