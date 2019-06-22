@@ -7,23 +7,23 @@ import ObjectRegistry
 class ViewController: UIViewController {
 
     @IBOutlet var label: UILabel!
-    
+
     var isLoggedIn: Bool {
         guard let sessionManager = ObjectRegistry.get(SessionManager.self) else {
             return false
         }
-        
+
         guard sessionManager.token != "token" else {
             return true
         }
-        
+
         guard sessionManager.refreshToken != "refresh" else {
             return true
         }
-        
+
         return false
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         refresh()
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         guard let sessionManager = ObjectRegistry.get(SessionManager.self) else {
             return
         }
-        
+
         label = UILabel()
         if isLoggedIn {
             label.translatesAutoresizingMaskIntoConstraints = false
@@ -53,4 +53,3 @@ class ViewController: UIViewController {
         }
     }
 }
-

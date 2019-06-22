@@ -12,6 +12,7 @@ import XCTest
 protocol Protocol {}
 
 class ObjectRegistryTests: XCTestCase {
+    // swiftlint:disable function_body_length
     func testSingletonManager() {
         let superObject = SuperObject()
         let object = Object()
@@ -33,13 +34,12 @@ class ObjectRegistryTests: XCTestCase {
         let anotherObjectNamedChanged = AnotherObject()
         let differentObjectSameName1Changed = OtherObject()
         let differentObjectSameName2Changed = AnotherObject()
-        
-        
+
         superObjectNamed.value = ObjectRegistryTests.superObjectName
         objectNamed.value = ObjectRegistryTests.objectName
         otherObjectNamed.value = ObjectRegistryTests.otherObjectName
         anotherObjectNamed.value = ObjectRegistryTests.anotherObjectName
-        
+
         ObjectRegistry.register(superObject)
         ObjectRegistry.register(object)
         ObjectRegistry.register(otherObject)
@@ -50,22 +50,27 @@ class ObjectRegistryTests: XCTestCase {
         ObjectRegistry.register(anotherObjectNamed, named: ObjectRegistryTests.anotherObjectName)
         ObjectRegistry.register(differentObjectSameName1, named: ObjectRegistryTests.differentObjectSameName)
         ObjectRegistry.register(differentObjectSameName2, named: ObjectRegistryTests.differentObjectSameName)
-        
+
         XCTAssertEqual(10, ObjectRegistry.count)
-        
+
         XCTAssertTrue(ObjectRegistry.get(SuperObject.self) === superObject)
         XCTAssertTrue(ObjectRegistry.get(Object.self) === object)
         XCTAssertTrue(ObjectRegistry.get(OtherObject.self) === otherObject)
         XCTAssertTrue(ObjectRegistry.get(AnotherObject.self) === anotherObject)
-        XCTAssertTrue(ObjectRegistry.get(SuperObject.self, named: ObjectRegistryTests.superObjectName) === superObjectNamed)
+        XCTAssertTrue(ObjectRegistry.get(SuperObject.self,
+                                         named: ObjectRegistryTests.superObjectName) === superObjectNamed)
         XCTAssertTrue(ObjectRegistry.get(Object.self, named: ObjectRegistryTests.objectName) === objectNamed)
-        XCTAssertTrue(ObjectRegistry.get(OtherObject.self, named: ObjectRegistryTests.otherObjectName) === otherObjectNamed)
-        XCTAssertTrue(ObjectRegistry.get(AnotherObject.self, named: ObjectRegistryTests.anotherObjectName) === anotherObjectNamed)
         XCTAssertTrue(ObjectRegistry.get(OtherObject.self,
-                                               named: ObjectRegistryTests.differentObjectSameName) === differentObjectSameName1)
+                                         named: ObjectRegistryTests.otherObjectName) === otherObjectNamed)
         XCTAssertTrue(ObjectRegistry.get(AnotherObject.self,
-                                               named: ObjectRegistryTests.differentObjectSameName) === differentObjectSameName2)
-        
+                                         named: ObjectRegistryTests.anotherObjectName) === anotherObjectNamed)
+        XCTAssertTrue(ObjectRegistry.get(OtherObject.self,
+                                               named: ObjectRegistryTests.differentObjectSameName)
+            === differentObjectSameName1)
+        XCTAssertTrue(ObjectRegistry.get(AnotherObject.self,
+                                               named: ObjectRegistryTests.differentObjectSameName)
+            === differentObjectSameName2)
+
         ObjectRegistry.register(superObjectChanged)
         ObjectRegistry.register(objectChanged)
         ObjectRegistry.register(otherObjectChanged)
@@ -76,22 +81,28 @@ class ObjectRegistryTests: XCTestCase {
         ObjectRegistry.register(anotherObjectNamedChanged, named: ObjectRegistryTests.anotherObjectName)
         ObjectRegistry.register(differentObjectSameName1Changed, named: ObjectRegistryTests.differentObjectSameName)
         ObjectRegistry.register(differentObjectSameName2Changed, named: ObjectRegistryTests.differentObjectSameName)
-        
+
         XCTAssertEqual(10, ObjectRegistry.count)
-        
+
         XCTAssertTrue(ObjectRegistry.get(SuperObject.self) === superObjectChanged)
         XCTAssertTrue(ObjectRegistry.get(Object.self) === objectChanged)
         XCTAssertTrue(ObjectRegistry.get(OtherObject.self) === otherObjectChanged)
         XCTAssertTrue(ObjectRegistry.get(AnotherObject.self) === anotherObjectChanged)
-        XCTAssertTrue(ObjectRegistry.get(SuperObject.self, named: ObjectRegistryTests.superObjectName) === superObjectNamedChanged)
-        XCTAssertTrue(ObjectRegistry.get(Object.self, named: ObjectRegistryTests.objectName) === objectNamedChanged)
-        XCTAssertTrue(ObjectRegistry.get(OtherObject.self, named: ObjectRegistryTests.otherObjectName) === otherObjectNamedChanged)
-        XCTAssertTrue(ObjectRegistry.get(AnotherObject.self, named: ObjectRegistryTests.anotherObjectName) === anotherObjectNamedChanged)
+        XCTAssertTrue(ObjectRegistry.get(SuperObject.self,
+                                         named: ObjectRegistryTests.superObjectName) === superObjectNamedChanged)
+        XCTAssertTrue(ObjectRegistry.get(Object.self,
+                                         named: ObjectRegistryTests.objectName) === objectNamedChanged)
         XCTAssertTrue(ObjectRegistry.get(OtherObject.self,
-                                               named: ObjectRegistryTests.differentObjectSameName) === differentObjectSameName1Changed)
+                                         named: ObjectRegistryTests.otherObjectName) === otherObjectNamedChanged)
         XCTAssertTrue(ObjectRegistry.get(AnotherObject.self,
-                                               named: ObjectRegistryTests.differentObjectSameName) === differentObjectSameName2Changed)
-        
+                                         named: ObjectRegistryTests.anotherObjectName) === anotherObjectNamedChanged)
+        XCTAssertTrue(ObjectRegistry.get(OtherObject.self,
+                                               named: ObjectRegistryTests.differentObjectSameName)
+            === differentObjectSameName1Changed)
+        XCTAssertTrue(ObjectRegistry.get(AnotherObject.self,
+                                               named: ObjectRegistryTests.differentObjectSameName)
+            === differentObjectSameName2Changed)
+
         ObjectRegistry.unregister(SuperObject.self)
         XCTAssertNil(ObjectRegistry.get(SuperObject.self))
         ObjectRegistry.unregister(Object.self)
@@ -114,9 +125,10 @@ class ObjectRegistryTests: XCTestCase {
         XCTAssertNil(ObjectRegistry.get(AnotherObject.self, named: ObjectRegistryTests.differentObjectSameName))
         ObjectRegistry.unregister(AnotherObject.self, named: ObjectRegistryTests.differentObjectSameName)
         XCTAssertNil(ObjectRegistry.get(AnotherObject.self, named: ObjectRegistryTests.differentObjectSameName))
-        
+
         XCTAssertEqual(0, ObjectRegistry.count)
     }
+    // swiftlint:enable function_body_length
 }
 
 extension ObjectRegistryTests {
@@ -129,22 +141,22 @@ extension ObjectRegistryTests {
     static let otherObjectName = "OtherObjectName"
     static let anotherObjectName = "AnotherObjectName"
     static let differentObjectSameName = "SameNameObject"
-    
+
     class SuperObject: Protocol {
         var value = ObjectRegistryTests.superObjectValue
     }
-    
+
     class Object: SuperObject {
         override init() {
             super.init()
             value = ObjectRegistryTests.objectValue
         }
     }
-    
+
     class OtherObject: Protocol {
         var value = ObjectRegistryTests.otherObjectValue
     }
-    
+
     class AnotherObject {
         var value = ObjectRegistryTests.anotherObjectValue
     }

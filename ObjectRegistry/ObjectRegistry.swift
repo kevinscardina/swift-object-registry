@@ -18,7 +18,7 @@ extension ObjectRegistry {
     // MARK: - internal properties
     /// Count is the number of objects registered with the registry
     var count: Int { return registry.count }
-    
+
     // MARK: - internal functions
     /// Registers with the registry, once registered the same instance can be retreived by requesting the type
     /// - parameters:
@@ -33,7 +33,7 @@ extension ObjectRegistry {
         print("changed a value")
         registry[idx] = (named, object)
     }
-    
+
     /// Unregisters with the registry based on type
     /// - parameters:
     ///     - ofType: type the object one would like to unregister
@@ -44,7 +44,7 @@ extension ObjectRegistry {
         }
         registry.remove(at: idx)
     }
-    
+
     /// Unregisters with the registry
     /// - parameters:
     ///     - ofType: type the object one would like to get the single instance of
@@ -58,13 +58,13 @@ public extension ObjectRegistry {
     // MARK: - internal static properties
     /// singleton instance of the registry used by the static functions
     static let shared = ObjectRegistry()
-    
+
     // MARK: - public static properties
     /// Count is the number of objects registered with the registry
     public static var count: Int {
         return ObjectRegistry.shared.count
     }
-    
+
     // MARK: - public static functions
     /// Registers with the registry, once registered the same instance can be retreived by requesting the type
     /// - parameters:
@@ -73,7 +73,7 @@ public extension ObjectRegistry {
     public static func register<T: AnyObject>(_ object: T, named: String? = nil) {
         ObjectRegistry.shared.register(object, named: named)
     }
-    
+
     /// Unregisters with the registry based on type
     /// - parameters:
     ///     - ofType: type the object one would like to unregister
@@ -81,7 +81,7 @@ public extension ObjectRegistry {
     public static func unregister<T: AnyObject>(_ ofType: T.Type, named: String? = nil) {
         ObjectRegistry.shared.unregister(ofType, named: named)
     }
-    
+
     /// Unregisters with the registry
     /// - parameters:
     ///     - ofType: type the object one would like to get the single instance of

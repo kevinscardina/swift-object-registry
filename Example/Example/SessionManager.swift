@@ -8,7 +8,7 @@ class SessionManager {
     var lastName: String?
     var token: String?
     var refreshToken: String?
-    
+
     init(firstName: String? = nil, lastName: String? = nil,
          token: String? = nil, refreshToken: String? = nil) {
         self.firstName = firstName
