@@ -1,3 +1,5 @@
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 # SingletonRegistry
 
  SingletonRegistry is a class used to store singleton instances within a project.
