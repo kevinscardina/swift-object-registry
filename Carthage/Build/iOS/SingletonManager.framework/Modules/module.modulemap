@@ -1,0 +1,11 @@
+framework module SingletonManager {
+  umbrella header "SingletonManager.h"
+
+  export *
+  module * { export * }
+}
+
+module SingletonManager.Swift {
+    header "SingletonManager-Swift.h"
+    requires objc
+}
