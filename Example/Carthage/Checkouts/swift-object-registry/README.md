@@ -8,7 +8,7 @@
  getting the singleton from the ObjectRegistry.  A singleton object can be registered in the
  ObjectRegistry based on the object type, and an optional name.
  
- ## Usage
+ ## Example
  
  ```swift
 class Object {
@@ -32,20 +32,4 @@ ObjectRegistry.unregister(Object.self)
 
 // to unregister the Object named "Special Object"
 ObjectRegistry.unregister(Object.self, named: "Special Object")
-```
-
-## Installing with Carthage
-
-[Here is a great how-to on install with Carthage.](https://www.mokacoding.com/blog/setting-up-testing-libraries-with-carthage-xcode7/)  
-
-Add this to the Cartfile
-
-```
-github "kevinscardina/swift-object-registry" ~> 1.0.0
-```
-
-The frameworks name is:
-
-```
-ObjectRegistry.framework
 ```
