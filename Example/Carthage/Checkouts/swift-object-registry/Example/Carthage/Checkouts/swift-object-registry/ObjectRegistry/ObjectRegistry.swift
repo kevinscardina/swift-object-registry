@@ -82,7 +82,7 @@ public extension ObjectRegistry {
         ObjectRegistry.shared.unregister(ofType, named: named)
     }
 
-    /// get an object from the registry
+    /// Unregisters with the registry
     /// - parameters:
     ///     - ofType: type the object one would like to get the single instance of
     ///     - named: what the object to get is named if object was registred with a name

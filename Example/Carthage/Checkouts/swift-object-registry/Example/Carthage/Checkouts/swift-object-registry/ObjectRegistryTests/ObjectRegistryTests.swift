@@ -90,8 +90,7 @@ class ObjectRegistryTests: XCTestCase {
         XCTAssertTrue(ObjectRegistry.get(AnotherObject.self) === anotherObjectChanged)
         XCTAssertTrue(ObjectRegistry.get(SuperObject.self,
                                          named: ObjectRegistryTests.superObjectName) === superObjectNamedChanged)
-        XCTAssertTrue(ObjectRegistry.get(Object.self,
-                                         named: ObjectRegistryTests.objectName) === objectNamedChanged)
+        XCTAssertTrue(ObjectRegistry.get(Object.self, named: ObjectRegistryTests.objectName) === objectNamedChanged)
         XCTAssertTrue(ObjectRegistry.get(OtherObject.self,
                                          named: ObjectRegistryTests.otherObjectName) === otherObjectNamedChanged)
         XCTAssertTrue(ObjectRegistry.get(AnotherObject.self,
