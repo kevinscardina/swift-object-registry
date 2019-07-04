@@ -36,7 +36,7 @@ ObjectRegistry.unregister(Object.self, named: "Special Object")
 
 ## Installing with Carthage
 
-[Here is a great how-to on install with Carthage.](https://www.mokacoding.com/blog/setting-up-testing-libraries-with-carthage-xcode7/)  
+[Here is a great how-to on install with Carthage.](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)  
 
 Add this to the Cartfile
 
